@@ -51,30 +51,7 @@ const login = {
 
       <input type="text" class="mt-4 w-100 btn btn-primary" value="Iniciar Sesion" id="enviar">
     </form>
-  </div>`,
-  script: async () => {
-    document.querySelector("#enviar").addEventListener("click", async (e) => {
-      e.preventDefault();
-      try {
-        let usuarioLogin = {
-          //recojo los valores de los inputs y los guardo en un objeto 
-          email: document.querySelector("#inputEmail").value,
-          password: document.querySelector("#inputPassword").value
-        };
-        const usuarioLoggeado = await User.login(usuarioLogin);
-        if (usuarioLoggeado) {
-          document.querySelector("#emailUsuario").innerHTML = usuarioLoggeado.email;
-          document.querySelector("#login").innerHTML = "LOGOUT";
-          document.querySelector("#login").value = "logout";
-        }
-        alert("Bienvenido!!!");
-        document.querySelector("main").innerHTML = panel.template;
-        panel.script();
-      } catch (error) {
-        alert(error);
-      }
-    });
-  }
+  </div>`
 };
 const registro = {
   template: `<div class="pt-5">
@@ -88,26 +65,7 @@ const registro = {
 
                 <input type="text" class="mt-4 w-100 btn btn-success" value="Registro" id="enviar">
                 </form>
-            </div>`,
-  script: async () => {
-    document.querySelector("#enviar").addEventListener("click", async (e) => {
-      e.preventDefault();
-      try {
-        let usuarioRegistro = {
-          //recojo los valores de los inputs y los guardo en un objeto 
-          email: document.querySelector("#inputUsuario").value,
-          password: document.querySelector("#inputPassword").value
-        };
-        const nuevoUsuario = await User.create(usuarioRegistro);
-        console.log(nuevoUsuario);
-        alert("Usuario creado correctamente, antes de loggearte confirma el mail, Gracias!");
-        document.querySelector("main").innerHTML = login.template;
-        login.script();
-      } catch (error) {
-        alert(error);
-      }
-    });
-  }
+            </div>`
 };
 const header = {
   template: `
