@@ -166,6 +166,12 @@ const series = [
     "año": 2016,
     "descripcion": "La serie sigue la vida de la Reina Isabel II y los eventos históricos que tuvieron lugar durante su reinado.",
     "imagen_url": "https://www.elindependiente.com/wp-content/uploads/2021/08/the-crown-serie-netflix.jpg"
+  },
+  {
+    "nombre": "The Crown",
+    "año": 2016,
+    "descripcion": "La serie sigue la vida de la Reina Isabel II y los eventos históricos que tuvieron lugar durante su reinado.",
+    "imagen_url": "https://www.elindependiente.com/wp-content/uploads/2021/08/the-crown-serie-netflix.jpg"
   }
 ];
 const HomeComponent = {
